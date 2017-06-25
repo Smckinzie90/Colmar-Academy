@@ -12,6 +12,9 @@ body {
   z-index: 10;
 }
 
+                              /*    Header    */
+
+
 header {
   position: fixed;
   top: 0px;
@@ -23,16 +26,6 @@ header {
   background-color: white;
   border: 1px solid black;
   z-index: 20;
-}
-
-nav {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-nav a {
-  margin: 0.5rem;
 }
 
 #logo {
@@ -50,9 +43,47 @@ nav a {
   font-weight: bold;
 }
 
-#content {
-  width: 90rem;
+nav {
   display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav a {
+  margin: 0.5rem;
+}
+
+#mobilenav {
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+
+  #logo {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  #mobilenav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+}
+
+                            /*    Contents    */
+
+
+#content {
+  display: flex;
+  max-width: 90rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
@@ -70,9 +101,27 @@ h2 {
   font-weight: bold;
 }
 
+@media only screen and (max-width: 1024px) {
+  #content {
+    overflow-x: scroll;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #content {
+    overflow: hidden;
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+
+  /*    Banner    */
+
 #banner {
   display: flex;
   width: 100%;
+  height: auto;
   justify-content: flex-start;
   align-items: center;
   margin: 2rem 1.5rem;
@@ -82,28 +131,66 @@ h2 {
  #banner img {
    display: flex;
    width: 60%;
-   margin-right: 2.5rem;
  }
 
  #banner .column-right {
    display: flex;
-   height: 14rem;
    flex-direction: column;
    justify-content: space-around;
    align-items: flex-start;
+   margin-left: 2.5rem;
    border: 1px solid black;
+ }
+
+ #banner .column-right p {
+   margin: 2rem 0rem;
  }
 
  .button {
    color: white;
    width: 100%;
-   padding: 0.5rem;
+   margin: 0rem;
    background-color: black;
  }
+
+ .button p {
+   margin: 0px;
+ }
+
+
+@media only screen and (max-width: 480px) {
+
+  #banner {
+    flex-direction: column;
+  }
+
+  #banner img {
+    width: 100%;
+    height: 100%;
+  }
+
+  #banner .column-left {
+    width: 100%;
+    height: 180px;
+  }
+
+  #banner .column-right {
+    width: 100%;
+    margin: 2rem 1rem;
+  }
+
+  #banner .column-right p {
+    top-margin: 2rem;
+    bottom-margin: 1.5rem;
+  }
+}
+
+  /*    Featured    */
 
 #featured {
   display: flex;
   width: 100%;
+  height: auto;
   justify-content: flex-start;
   align-items: center;
   margin: 2rem 1.5rem;
@@ -133,10 +220,12 @@ h2 {
 #featured .column-right {
   display: flex;
   height: 100%;
+  width: 35%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   border: 1px solid black;
+  overflow: hidden;
 }
 
 #featured .container {
@@ -150,8 +239,8 @@ h2 {
 }
 
 #featured .container img {
-  height: 9.25rem;
-  width: 9.25rem
+  height: 35%;
+  width: 35%;
 }
 
 #featured .text {
@@ -170,6 +259,46 @@ h2 {
   margin: 0.5rem 1rem;
 }
 
+#featured .mobile {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  #featured .desktop {
+    display: none;
+  }
+
+  #featured .mobile {
+    display: flex;
+  }
+  
+  #featured .column-left {
+    display: none;
+  }
+
+  #featured .column-right {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+
+  #featured .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #featured .container img {
+    width: 100%;
+  }
+
+  #featured .text {
+    height: 6rem;
+  }
+}
+
+  /*    Courses    */
+
 #courses {
   display: flex;
   width: 100%;
@@ -182,7 +311,7 @@ h2 {
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   border: 1px solid black;
 }
 
@@ -199,7 +328,7 @@ h2 {
 
 .course {
   display: flex;
-  width: 100%
+  width: 100%;
   height: 13.75rem;
   text-align: left;
   flex-direction: column;
@@ -223,9 +352,42 @@ h2 {
 }
 
 .row .container p {
-  margin-bottom: 1.5rem;
-  margin-left: 1rem;
+  margin: 1.5rem 1rem;
 }
+
+
+@media only screen and (max-width: 480px) {
+
+  #courses {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  #courses .row {
+    flex-direction: column;
+  }
+
+  #courses .container p {
+    display: none;
+  }
+
+  #courses .container p:hover {
+    display: block;
+    width: 100%;
+  }
+
+  #course img, h6 {
+    display: none;
+  }
+
+  #course h3 {
+    width: 100%;
+    padding: 1rem;
+    border: 0.5rem 1rem;
+  }
+}
+
+  /*    Thesis    */
 
 #thesis {
   display: flex;
@@ -257,15 +419,17 @@ h2 {
 #thesis .column-right {
   display: flex;
   height: 100%;
+  width: 35%;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   border: 1px solid black;
+  overflow: hidden;
 }
 
 #thesis .column-right .container {
   display: flex;
-  height: 33%
+  height: 33%;
   width: 100%;
   justify-content: flex-start;
   align-items: center;
@@ -274,8 +438,8 @@ h2 {
 }
 
 #thesis .column-right .container img {
-  width: 9.25rem;
-  height: 9.25rem;
+  width: 35%;
+  height: auto;
 }
 
 #thesis .text {
@@ -292,6 +456,30 @@ h2 {
   margin: 0.5rem 1rem;
 }
 
+
+@media only screen and (max-width: 480px) {
+
+  #thesis {
+    margin-bottom: 1.5rem;
+  }
+
+  #thesis .column-left h3, p {
+      display: none;
+  }
+
+  #thesis video {
+    width: 100%;
+    height: auto;
+  }
+
+  #thesis .column-right {
+    display: none;
+  }
+}
+
+                               /*    Footer    */
+
+
 footer {
   width: 100%;
   display: flex;
@@ -303,4 +491,15 @@ footer {
 
 footer p {
   margin: 1.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+
+  footer {
+    padding: 1rem;
+  }
+
+  footer nav {
+    display: none;
+  }
 }
