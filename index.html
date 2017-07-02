@@ -2,16 +2,17 @@
 <html>
 
   <head>
-    <link href="./resources/css/reset.css" type="text/css" rel="stylesheet">
-    <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
-    <meta charset="utf-8">
+    <link href="./resources/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="./resources/css/style.css" type="text/css" rel="stylesheet" />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+    <meta charset="utf-8" />
     <title>Colmar Academy</title>
   </head>
 
   <body>
     <header>
-      <div id="logo">
-        <img src="./resources/images/ic-logo.svg">
+      <div id="logo" role="presentation">
+        <img src="./resources/images/ic-logo.svg" alt="logo">
         <h2><strong>COLMAR</strong> ACADEMY</h2>
       </div>
 
@@ -23,17 +24,17 @@
       </nav>
 
       <div id="mobilenav">
-        <a href="index.html"><img src="./resources/images/ic-logo.svg"></a>
-        <a href="index.html"><img src="./resources/images/ic-on-campus.svg"></a>
-        <a href="index.html"><img src="./resources/images/ic-online.svg"></a>
-        <a href="index.html"><img src="./resources/images/ic-login.svg"></a>
+        <a href="index.html"><img src="./resources/images/ic-logo.svg" alt="logo"></a>
+        <a href="index.html"><img src="./resources/images/ic-on-campus.svg" alt="on campus"></a>
+        <a href="index.html"><img src="./resources/images/ic-online.svg" alt="online"></a>
+        <a href="index.html"><img src="./resources/images/ic-login.svg" alt="login"></a>
       </div>
     </header>
 
     <div id="content">
       <div id="banner">
         <div class="column-left">
-          <img src="./resources/images/banner.jpg">
+          <img src="./resources/images/banner.jpg" alt="Students reading at a table">
         </div>
 
         <div class="column-right">
@@ -47,7 +48,7 @@
       <div id="featured">
 
         <div class="column-left">
-          <img src="./resources/images/information-main.jpg">
+          <img src="./resources/images/information-main.jpg" src="A student reading a book">
           <h2>It doesn't hurt to keep practicing</h2>
           <p>Nulla vehicula blandit tortor sit amet tincidunt. Maecenas odio ipsum,
           lobortis ac turpis ut, commodo tristique leo. Sed lacus magna, posuere ac
@@ -55,64 +56,37 @@
           <p><em>Emanuel, Sr Strategist at Hiring.com</em></p>
         </div>
 
-        <div class="column-right desktop">
+        <div class="column-right">
           <div class="container">
-            <img src="./resources/images/information-orientation.jpg">
+            <img class="full" src="./resources/images/information-orientation.jpg" alt="students walking">
+            <img class="mobile" src="./resources/images/information-orientation-mobile.jpg"  alt="students walking">
             <div class="text">
               <h3>Orientation date</h3>
               <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-              <a href="./index.html"><p>Read more</p></a>
+              <a class="button" href="./index.html"><p>Read more</p></a>
             </div>
           </div>
 
           <div class="container">
-            <img src="./resources/images/information-campus.jpg">
+            <img class="full" src="./resources/images/information-campus.jpg" alt="A picture of a campus room">
+            <img class="mobile" src="./resources/images/information-campus-mobile.jpg" alt="A picture of a campus room">
             <div class="text">
               <h3>Our campus</h3>
               <p>Find which campus is close by you</p>
-              <a href="./index.html"><p>Read more</p></a>
+              <a class="button" href="./index.html"><p>Read more</p></a>
             </div>
           </div>
 
           <div class="container">
-            <img src="./resources/images/information-guest-lecture.jpg">
+            <img class="full" src="./resources/images/information-guest-lecture.jpg" alt="a picture of Oliver Sack">
+            <img class="mobile" src="./resources/images/information-guest-lecture-mobile.jpg"  alt="a picture of Oliver Sack">
             <div class="text">
               <h3>Our guest lecture</h3>
               <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-              <a href="./index.html"><p>Read more</p></a>
+              <a class="button" href="./index.html"><p>Read more</p></a>
             </div>
           </div>
         </div>
-
-        <div class="column-right mobile">
-          <div class="container">
-            <img src="./resources/images/information-orientation-mobile.jpg">
-            <div class="text">
-              <h3>Orientation date</h3>
-              <p>Tue 10/11 & Wed 10/12: 8am-3pm</p>
-              <a href="./index.html"><p>Read more</p></a>
-            </div>
-          </div>
-
-          <div class="container">
-            <img src="./resources/images/information-campus-mobile.jpg">
-            <div class="text">
-              <h3>Our campus</h3>
-              <p>Find which campus is close by you</p>
-              <a href="./index.html"><p>Read more</p></a>
-            </div>
-          </div>
-
-          <div class="container">
-            <img src="./resources/images/information-guest-lecture-mobile.jpg">
-            <div class="text">
-              <h3>Our guest lecture</h3>
-              <p>Join a keynote with Oliver Sack about music in medical treatment</p>
-              <a href="./index.html"><p>Read more</p></a>
-            </div>
-          </div>
-        </div>
-
       </div>
 
       <h2>Start learning</h2>
@@ -123,7 +97,7 @@
           <div class="container">
             <div class="course">
               <img src="./resources/images/course-software.jpg">
-              <h3>Software engineering</h3>
+              <a href="#"><h3>Software engineering</h3></a>
               <h6>COURSES</h6>
             </div>
             <p>Web Development, Mobile Development, iOT, APIs</p>
@@ -132,7 +106,7 @@
           <div class="container">
             <div class="course">
               <img src="./resources/images/course-computer-art.jpg">
-              <h3>Computer art</h3>
+              <a href="#"><h3>Computer art</h3></a>
               <h6>COURSES</h6>
             </div>
             <p>Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
@@ -141,7 +115,7 @@
           <div class="container">
             <div class="course">
               <img src="./resources/images/course-design.jpg">
-              <h3>Design</h3>
+              <a href="#"><h3>Design</h3></a>
               <h6>COURSES</h6>
             </div>
             <p>User Experience Design, User Research, Visual Design</p>
@@ -152,7 +126,7 @@
           <div class="container">
             <div class="course">
               <img src="./resources/images/course-data.jpg">
-              <h3>Data</h3>
+              <a href="#"><h3>Data</h3></a>
               <h6>COURSES</h6>
             </div>
             <p>Data Science, Big Data, SQL, Data Visualization</p>
@@ -161,7 +135,7 @@
           <div class="container">
             <div class="course">
               <img src="./resources/images/course-business.jpg">
-              <h3>Business</h3>
+              <a href="#"><h3>Business</h3></a>
               <h6>COURSES</h6>
             </div>
             <p>Product Development, Business Development, Startup</p>
@@ -170,7 +144,7 @@
           <div class="container">
             <div class="course">
               <img src="./resources/images/course-marketing.jpg">
-              <h3>Marketing</h3>
+              <a href="#"><h3>Marketing</h3></a>
               <h6>COURSES</h6>
             </div>
             <p>Analytics, Content Marketing, Mobile Marketing</p>
