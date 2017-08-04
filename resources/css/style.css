@@ -24,7 +24,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  text-shadow: 2px 2px 2px #71ADB5;
+  text-shadow: 2px 2px 2px #D8DFE2;
   background-color: #3EC483;
   margin-top: 2rem;
   z-index: 10;
@@ -50,6 +50,7 @@ header {
   display: flex;
   align-items: center;
   font-family: "Eczar", serif;
+  text-shadow: none;
   margin-left: 1.5rem;
 }
 
@@ -71,9 +72,16 @@ nav {
 
 nav a {
   color: #0D3446;
+  text-shadow: none;
   margin: 0.5rem;
   border: 1px solid #0D3446;
   border-radius: 1rem;
+  transition: 200ms;
+}
+
+nav a:hover {
+  color: #D8DFE2;
+  background-color: #0D3446;
 }
 
 #mobilenav {
@@ -165,8 +173,7 @@ a:hover {
    padding: 1rem;
    background-color: #0D3446;
    border-radius: 0.5rem;
-   transition-property: all;
-   transition-duration: 250ms;
+   transition: 200ms;
  }
 
  .button:hover {
@@ -324,7 +331,6 @@ a:hover {
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px #71ADB5;
   overflow: hidden;
 }
 
@@ -347,6 +353,7 @@ a:hover {
    color: #D8DFE2;
    border: 1px solid #71ADB5;
    border-radius: 1rem;
+   transition: 200ms;
  }
 
  #featured .link:hover {
@@ -471,8 +478,13 @@ a:hover {
   text-align: left;
   margin: 2rem;
   background-color: #71ADB5;
-  box-shadow: 5px 5px 10px #0D3446;
+  box-shadow: 0.5rem 0.5rem 1rem #0D3446;
   overflow: hidden;
+  transition: 200ms;
+}
+
+#courses .container:hover {
+  box-shadow: 1rem 1rem 1.5rem #0D3446;
 }
 
 .course {
@@ -593,7 +605,6 @@ a:hover {
   justify-content: flex-start;
   align-items: flex-start;
   border-radius: 10px;
-  box-shadow: 5px 5px 10px #71ADB5;
   overflow: hidden;
 }
 
@@ -640,6 +651,7 @@ a:hover {
    color: #D8DFE2;
    border: 1px solid #71ADB5;
    border-radius: 1rem;
+   transition: 200ms;
  }
 
  #thesis .link:hover {
