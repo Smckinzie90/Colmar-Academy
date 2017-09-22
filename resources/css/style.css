@@ -72,16 +72,19 @@ nav {
 
 nav a {
   color: #0D3446;
-  text-shadow: none;
+  box-shadow: 2px 2px 5px;
   margin: 0.5rem;
   border: 1px solid #0D3446;
-  border-radius: 1rem;
   transition: 200ms;
 }
 
 nav a:hover {
   color: #D8DFE2;
   background-color: #0D3446;
+  box-shadow: none;
+  text-shadow: none;
+/*  margin-top: 0.4rem;
+  margin-bottom: 0.6rem;*/
 }
 
 #mobilenav {
@@ -218,7 +221,7 @@ a:hover {
 #banner {
   display: flex;
   width: 100%;
-  height: auto;
+  height: 100vh;
   justify-content: flex-start;
   align-items: center;
   margin: 2rem 1.5rem;
@@ -227,7 +230,8 @@ a:hover {
 
 #banner .column-left {
   display: flex;
-  width: 60%;
+  height: 100%;
+  max-width: 75%;
 }
 
 #banner img {
